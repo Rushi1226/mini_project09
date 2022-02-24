@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/post.css">
+    <title>Show Images</title>
+    <style>
+        .suggestion-slider{
+    width: 100%;
+    position: relative;
+}
+
+.suggestion-container{
+    position: relative;
+    flex-wrap: nowrap;
+    overflow: scroll;
+    scroll-behavior: smooth;
+}
+
+.suggestion-container::-webkit-scrollbar{
+    display: none;
+}
+
+.nxt-arrow, .pre-arrow{
+    height: 30px;
+    width: 30px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+.nxt-arrow{
+    right: -50px;
+}
+
+.pre-arrow{
+    left: -50px;
+    transform: rotate(180deg);
+}
+    </style>
+   
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav class="navbar">
+        <img src="images/logo.png" class="logo" alt="">
+        <form class="search-box">
+            <input type="text" placeholder="search.." name="search-query" id="search-input">
+            <button class="search-btn" type="submit"><img src="img/icon/search.png" class="search-icon" alt=""></button>
+        </form>
+        <div class="nav-links">
+            <a href="index.html" class="nav-links"><img src="img/icon/home-nofill.png" class="nav-icon" alt=""></a>
+            <div class="activity-log">
+                <img src="img/icon/heart-nofill.png" class="nav-icon" alt="">
+                <div class="activity-container hide">
+                    <div class="activity-card">
+                        <img src="img/user1.png" class="user-img" alt="">
+                        <p class="activity"><b>Sam</b> liked your post</p>
+                        <img src="img/posts/post1.png" class="activity-post" alt="">
+                    </div>
+                    <div class="activity-card">
+                        <img src="img/user2.png" class="user-img" alt="">
+                        <p class="activity"><b>John</b> liked your post</p>
+                        <img src="img/posts/post1.png" class="activity-post" alt="">
+                    </div>
+                    <div class="activity-card">
+                        <img src="img/user3.png" class="user-img" alt="">
+                        <p class="activity"><b>Tony</b> liked your post</p>
+                        <img src="img/posts/post1.png" class="activity-post" alt="">
+                    </div>
+                    <div class="activity-card">
+                        <img src="img/user4.png" class="user-img" alt="">
+                        <p class="activity"><b>Hulk</b> liked your post</p>
+                        <img src="img/posts/post1.png" class="activity-post" alt="">
+                    </div>
+                </div>
+            </div>
+            
+            <a href="#" class="nav-links"><img src="img/icon/add-nofill.png" class="nav-icon" alt=""></a>
+            <a href="#" class="nav-links"><img src="images/img.jfif" class="nav-icon user-profile" alt=""></a>
+        </div>
+    </nav>
+
+    <!-- user info -->
+    <div class="user-info">
+        <img src="img/user1.png" class="user-dp" alt="">
+        <div class="info-container">
+            <h1 class="name">Rushikesh Kadam</h1>
+            <p class="username">@Rushikesh</p>
+            <p>Hi...This is Rushikesh. I am working as a Software Engineer in Cybage. I have recently completed the PG Diploma in CDAC and did the graduation in Electrical Engineering.</p>
+        </div>
+        <p class="number-card following-card">
+            4 <span>following</span>
+        </p>
+        <p class="number-card following-card">
+            5 <span>followers</span>
+        </p>
+        <p class="number-card following-card">
+            8 <span>posts</span>
+        </p>
+    </div>
+
+    <div class="btn-container">
+        <button class="btn follow-btn">follow</button>
+        <button class="btn edit-btn">edit page</button>
+        <button class="btn logout-btn">logout</button>
+    </div>
+    <!--Fetch the image into the div-->
+    <div id='container'></div>
+    
+    <h1 class="suggestion-heading">Suggestions</h1>
+
+    <div class="suggestion-slider">
+        <img src="img/carousel-arrow.png" class="nxt-arrow" alt="">
+        <img src="img/carousel-arrow.png" class="pre-arrow" alt="">
+        <div class="suggestion-container">
+            <div class="user-card">
+                <img src="img/user2.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user3.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user4.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user5.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user3.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user4.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user5.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user3.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user4.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+            <div class="user-card">
+                <img src="img/user5.png" class="user-dp" alt="">
+                <p class="username">John</p>
+                <button class="follow-btn">follow</button>
+            </div>
+        </div>
+    </div>
+</body>
+
+<script src="js/user.js"></script>
+<script src="js/post.js"></script>
+
+</html>
